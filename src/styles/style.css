@@ -1,7 +1,7 @@
 @-webkit-keyframes textShadowPulse {
-  from { text-shadow: 0 0 1px #413d34; }
+  from { text-shadow: 0 0 1px #a09479; }
   50% { text-shadow: 0 0 0px #e8be6b; }
-  to { text-shadow: 0 0 1px #413d34; }
+  to { text-shadow: 0 0 1px #9a7a30; }
 }
 body {
   font-family: "anonymous-pro",monospace;
@@ -128,6 +128,8 @@ body {
   justify-content: space-around;
   flex-direction: column;
   background-color: #1d59ff;
+  width: 18vw;
+  height: 20vh;
 }
 
 .second-block
@@ -140,6 +142,8 @@ body {
   overflow: hidden;
   white-space: pre-wrap;
   text-overflow: ellipsis;
+  width: 15vw;
+  height: 90vh;
 }
 
 .third-block
@@ -147,8 +151,8 @@ body {
   display: none;
   flex-direction: column;
   background-color: #ffd91d;
-  width: 100em;
-  height: 80em;
+  width: 62vw;
+  height: 80vh;
 }
 
 .third-block.title
@@ -157,15 +161,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 100em;
-  height: 5em;
+  width: 62vw;
+  height: 10vh;
   align-items: center;
 }
 
 .third-block.gif-block.pic
 {
-  width: 53em;
-  height: 30em;
+  width: 30vw;
+  height: 30vh;
 }
 
 .third-block.gif-block
@@ -174,8 +178,9 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
-  width: 100em;
-  height: 80em;
+  width: 62vw;
+  top: 6vh;
+  height: 74vh;
   align-items: center;
 }
 
