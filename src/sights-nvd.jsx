@@ -28,7 +28,11 @@ render()
         return (
 
 
-            <>
+<div>
+                <a href="/root">
+                    <img src="/log.png" className="root-button" alt="Logo"/>
+                </a>
+
                 <div className="page-blocks">
 
                     <div className="first-block">
@@ -61,7 +65,12 @@ render()
                     </div>
 
                 </div>
-    </>
+
+                <div className="full-screen">
+                    <img src="/back.png" alt="Left Pic"/>
+                </div>
+</div>
+
         );
     }
 

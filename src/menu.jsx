@@ -12,16 +12,17 @@ render()
     {
 
         return (
-
+<>
             <div className="full-screen">
 
                     <video src="/eft_back.mp4" autoPlay muted loop>
                     </video>
 
+            </div>
 
             <div className="centered">
 
-                <img src="https://upload.wikimedia.org/wikipedia/ru/7/7a/Escape_from_Tarkov_logo.png" className="main-page-logo" alt="Logo"/>
+                <img src="/log.png" className="main-page-logo" alt="Logo"/>
 
                 <div className="main-page-menu">
 
@@ -36,8 +37,7 @@ render()
                     </a>
                 </div>
             </div>
-
-                </div>
+</>
         );
     }
 

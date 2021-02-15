@@ -5,7 +5,7 @@
 }
 body {
   font-family: "anonymous-pro",monospace;
-  color: #c5e5ef;
+  color: #E0E0E0;
   margin: 0;
   padding: 0;
   font-size: 9pt;
@@ -64,13 +64,22 @@ body {
 
 .full-screen{
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.full-screen img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
 .full-screen video{
   position: absolute;
   left: 0;
@@ -80,7 +89,6 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-
 
 .main-page-menu
 {
@@ -95,7 +103,24 @@ body {
 {
   position: absolute;
   align-self: center;
-  top: 20em;
+  top: 15vh;
+  width: 15vw;
+}
+
+
+.root-button
+{
+  position: absolute;
+  align-self: center;
+  top: 3vh;
+  left: 1vw;
+  width: 12vw;
+}
+
+.root-button:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .main-page-logo-upper
@@ -127,7 +152,8 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  background-color: #1d59ff;
+  background-color: #181818db;
+  border: 2px solid #080808;
   width: 18vw;
   height: 20vh;
 }
@@ -138,7 +164,8 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-  background-color: #ff1d1d;
+  background-color: #181818db;
+  border: 2px solid #080808;
   overflow: hidden;
   white-space: pre-wrap;
   text-overflow: ellipsis;
@@ -150,14 +177,15 @@ body {
 {
   display: none;
   flex-direction: column;
-  background-color: #ffd91d;
+  background-color: #181818db;
+  border: 1px solid #080808;
   width: 62vw;
-  height: 80vh;
+  height: 90vh;
 }
 
 .third-block.title
 {
-  background-color: #046900;
+  background-color: #181818db;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -168,19 +196,19 @@ body {
 
 .third-block.gif-block.pic
 {
-  width: 30vw;
-  height: 30vh;
+  width: 38vw;
+  height: 38vh;
 }
 
 .third-block.gif-block
 {
-  background-color: #620069;
+  background-color: #181818db;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   width: 62vw;
   top: 6vh;
-  height: 74vh;
+  height: 84vh;
   align-items: center;
 }
 
@@ -446,9 +474,9 @@ theme.button,button,input.button {
 @keyframes colorchange {
   0%   {background-color: #413d34;}
   25%   {background-color: #000000;}
-  50%  {background-color: #54462a;}
+  50%  {background-color: #26201a;}
   75%	{background-color: #413d34;}
-  100% {background-color: #000000;}
+  100% {background-color: #111010;}
 }
 
 @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
@@ -477,7 +505,7 @@ p{
 
 /* LINKS */
 a:link,a:visited {
-  color: white;
+  color: #E0E0E0;
   text-decoration: none;
   text-shadow: none;
 }
@@ -493,6 +521,7 @@ h1,h2,h3,h4,h5,h6.nolink {
 
 /* CSS reset */
 h1,h2,h3,h4,h5,h6 {
+  color: #9a8866;
   margin: 0;
   padding: 0;
   font-weight: normal;
