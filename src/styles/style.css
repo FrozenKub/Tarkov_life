@@ -5,7 +5,7 @@
 }
 body {
   font-family: "anonymous-pro",monospace;
-  color: #E0E0E0;
+  color: #777667;
   margin: 0;
   padding: 0;
   font-size: 9pt;
@@ -113,7 +113,7 @@ body {
   position: absolute;
   align-self: center;
   top: 3vh;
-  left: 1vw;
+  left: 4vw;
   width: 12vw;
 }
 
@@ -145,28 +145,35 @@ body {
   transform: scale(1.1);
 }
 
+.small-pic
+{
+  width: 20%;
+}
 
 .first-block
 {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
   background-color: #181818db;
   border: 2px solid #080808;
+  overflow: auto;
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
   width: 18vw;
-  height: 20vh;
+  height: 50vh;
 }
 
 .second-block
 {
   display: none;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
   background-color: #181818db;
   border: 2px solid #080808;
-  overflow: hidden;
+  overflow: auto;
   white-space: pre-wrap;
   text-overflow: ellipsis;
   width: 15vw;
@@ -310,11 +317,16 @@ body {
 }
 
 button{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   color: #9a8866;
   background-color: #00000000;
   font-size: 1.4em;
   border-radius: 10px;
-  border-width: 0px;
+  border-color: rgba(255,255,255,0);
+  border-bottom-color: #181818eb;
+  border-width: 1px;
 }
 
 button:hover{
