@@ -41,14 +41,13 @@ render()
                     </div>
 
                     <div className="second-block" id="second-block">
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "PK"})}}>Belomo PK-06 reflex sight</button>
+                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "PK6"})}}>Belomo PK-06 reflex sight</button>
                         <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "T1"})}}>Aimpoint Micro T-1 reflex sight</button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "BF3"})}}>	Burris FastFire 3 Reflex Sight</button>
+                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "FF3"})}}>	Burris FastFire 3 Reflex Sight</button>
                         <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "DP"})}}>Leupold DeltaPoint Reflex Sight</button>
                         <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "RMR"})}}>Trijicon RMR</button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "SR4"})}}>	Sig Sauer Romeo 4 reflex sight	</button>
-                        <button onClick={e=>{console.log(this.state.first, " ", this.state.second, " ", JSON.stringify("/" + this.state.first + this.state.second + "2.jpg")) }}>	CONSOLE	</button>
-                    </div>
+                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "R4"})}}>	Sig Sauer Romeo 4 reflex sight	</button>
+                      </div>
 
                     <div className="third-block" id="third-block">
                         <div className="third-block title">
