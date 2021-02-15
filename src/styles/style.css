@@ -281,6 +281,20 @@ body {
   text-overflow: ellipsis;
 }
 
+button{
+  color: #9a8866;
+  background-color: #00000000;
+  font-size: 1.4em;
+  border-radius: 10px;
+  border-width: 0px;
+}
+
+button:hover{
+  color: black;
+  background: #9a8866;
+}
+
+
 theme.button,button,input.button {
 }
 
