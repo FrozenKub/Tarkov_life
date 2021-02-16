@@ -20,10 +20,8 @@ render()
 
 
                 <div className="centered">
-                    <a href="/root">
-                        <img src="https://upload.wikimedia.org/wikipedia/ru/7/7a/Escape_from_Tarkov_logo.png" className="main-page-buttons" alt="Logo"/>
-                    </a>
 
+                        <h1>WORK IN PROGRESS</h1>
 
                 </div>
 
