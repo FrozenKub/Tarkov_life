@@ -55,7 +55,7 @@ render()
                         <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "RMR"})}}>Trijicon RMR<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/b/bd/Rmricon.png" className="small-pic"/></button>
                         <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "R4"})}}>	Sig Sauer Romeo 4 Reflex Sight<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/c/ca/Sig_Sauer_Romeo_4_reflex_sight_icon.png" className="small-pic"/></button>
                         <a> </a>
-                        <a>...REFLEX SIGHTS...</a>
+                        <a>...ASSAULT SCOPES...</a>
                         <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "DR1"})}}>ELCAN SpecterDR 1x/4x Scope<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/aa/SpectreDR_Icon.gif" className="small-pic"/></button>
                         <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "HAMR"})}}>Leupold Mark 4 HAMR 4x24mm DeltaPoint hybrid assault Scope<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/3/33/Hamricon.png" className="small-pic"/></button>
                         <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "PRISM"})}}>Primary Arms Compact prism Scope 2.5x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a0/Primary_Arms_Compact_prism_scope_2.5x_icon.png" className="small-pic"/></button>
