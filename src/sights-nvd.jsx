@@ -29,7 +29,7 @@ render()
 
 
 <div>
-                <a href="/root">
+                <a href="https://www.instagram.com/tarkov_life/" target="_blank">
                     <img src="/log.png" className="root-button" alt="Logo"/>
                 </a>
 

@@ -1,29 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import 'regenerator-runtime/runtime'
-import {composeWithDevTools} from 'redux-devtools-extension';
-import { Provider } from 'react-redux'
-import {applyMiddleware, createStore} from 'redux'
-import rootReducer from './reducers/rootReducer'
-import createSagaMiddleware from "redux-saga"
-import {watchLogin, watchPost, watchRegister} from "./saga/saga";
 
-const sagaMiddleware = createSagaMiddleware()
-
-import Main from "./Main.jsx"
 import './styles/style.css'
+import SightsNVD from "./sights-nvd.jsx";
 
-
-export const store = createStore(rootReducer, [],  composeWithDevTools(
-    applyMiddleware(sagaMiddleware)
-));
-
-sagaMiddleware.run(watchPost);
-sagaMiddleware.run(watchLogin);
-sagaMiddleware.run(watchRegister);
-
-ReactDOM.render(
-    <Provider store={store}>
-        <Main/>
-    </Provider>
-    , document.getElementById("root"));
+ReactDOM.render(<SightsNVD/>, document.getElementById("root"));
