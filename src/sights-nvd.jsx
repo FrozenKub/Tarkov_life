@@ -22,13 +22,55 @@ class SightsNVD extends React.Component{
     }
 
 
-render()
+    enlargeImg1() {
+
+        let img1 = document.getElementById("LP");
+
+        // Set image size to 1.5 times original
+        if (img1.style.transform == "translate(0px, 50%) scale(1.5)")
+        {
+            // Set image size to original
+            img1.style.transform = "scale(1) translate(0, 0) ";
+            img1.style.transition = "transform 0.25s ease";
+            img1.style.zIndex = "0";
+        }
+        else
+        {
+            img1.style.zIndex = "1";
+            img1.style.transform = "translate(0, 50%) scale(1.5)";
+            img1.style.transition = "transform 0.25s ease";
+        }
+    }
+
+
+
+    enlargeImg2() {
+
+        let img2 = document.getElementById("RP");
+
+        if (img2.style.transform == "translate(0px, -50%) scale(1.5)")
+        {
+            img2.style.transform = "scale(1) translate(0, 0) ";
+            img2.style.transition = "transform 0.25s ease";
+            img2.style.zIndex = "0";
+        }
+        else
+        {
+            img2.style.zIndex = "1";
+            img2.style.transform = "translate(0, -50%) scale(1.5)";
+            img2.style.transition = "transform 0.25s ease";
+        }
+    }
+
+
+
+    render()
     {
 
         return (
 
 
-<div>
+<div className="flex-wrapper">
                 <a href="https://www.instagram.com/tarkov_life/" target="_blank">
                     <img src="/log.png" className="root-button" alt="Logo"/>
                 </a>
@@ -78,8 +120,8 @@ render()
                             <h1>{this.state.second}</h1>
                         </div>
                         <div className="third-block gif-block">
-                            <img src={'/' + this.state.first + this.state.second + '1.jpg'} className="third-block gif-block pic" alt="Left Pic"/>
-                            <img src={'/' + this.state.first + this.state.second + '2.jpg'} className="third-block gif-block  pic" alt="Right Pic"/>
+                            <img src={'/' + this.state.first + this.state.second + '1.jpg'} onClick={this.enlargeImg1} className="third-block gif-block pic" alt="Left Pic" id="LP"/>
+                            <img src={'/' + this.state.first + this.state.second + '2.jpg'} onClick={this.enlargeImg2} className="third-block gif-block  pic" alt="Right Pic" id="RP"/>
                         </div>
                     </div>
 

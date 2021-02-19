@@ -154,7 +154,7 @@ body {
 {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-direction: column;
   background-color: #181818db;
   border: 2px solid #080808;
@@ -169,7 +169,7 @@ body {
 {
   display: none;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: column;
   background-color: #181818db;
   border: 2px solid #080808;
@@ -203,8 +203,8 @@ body {
 
 .third-block.gif-block.pic
 {
-  width: 38vw;
-  height: 38vh;
+  width: 28vw;
+  height: 18vw;
 }
 
 .third-block.gif-block
@@ -274,6 +274,13 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+
+.flex-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
 }
 
 .flex-container {
