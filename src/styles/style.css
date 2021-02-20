@@ -597,7 +597,7 @@ h1,h2,h3,h4,h5,h6.nolink {
     background-color: #181818db;
     border: 1px solid #080808;
     width: 78vw;
-    height: 70vh;
+    height: 60vh;
   }
 
   .third-block.title
@@ -626,17 +626,18 @@ h1,h2,h3,h4,h5,h6.nolink {
     flex-direction: column;
     width: 78vw;
     top: 26vh;
-    height: 60vh;
+    height: 50vh;
     align-items: center;
   }
 
 
   .second-third
   {
+    align-self: flex-start;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 90vh;
+    height: 80vh;
   }
 
 }
