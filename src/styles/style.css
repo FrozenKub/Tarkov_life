@@ -3,12 +3,29 @@
   50% { text-shadow: 0 0 0px #e8be6b; }
   to { text-shadow: 0 0 1px #9a7a30; }
 }
+
+
+
+/* CSS reset */
+h1,h2,h3,h4,h5,h6 {
+  color: #9a8866;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+
+
+
 body {
   font-family: "anonymous-pro",monospace;
   color: #777667;
   margin: 0;
   padding: 0;
-  font-size: 9pt;
+  font-size: 6pt;
   line-height: 140%;
   background-repeat: repeat-x;
   background-size: 250px;
@@ -16,6 +33,7 @@ body {
   animation: colorchange 30s infinite;
   -webkit-animation: colorchange 30s infinite;
 }
+
 
 .uptext
 {
@@ -145,10 +163,26 @@ body {
   transform: scale(1.1);
 }
 
+
+.centeredA
+{
+  align-self: center;
+}
+
+
 .small-pic
 {
   width: 20%;
 }
+
+
+.second-third
+{
+  display: flex;
+  flex-direction: row;
+}
+
+
 
 .first-block
 {
@@ -162,7 +196,7 @@ body {
   white-space: pre-wrap;
   text-overflow: ellipsis;
   width: 18vw;
-  height: 50vh;
+  height: 30vh;
 }
 
 .second-block
@@ -174,7 +208,7 @@ body {
   background-color: #181818db;
   border: 2px solid #080808;
   overflow: auto;
-  white-space: pre-wrap;
+  white-space: break-spaces;
   text-overflow: ellipsis;
   width: 15vw;
   height: 90vh;
@@ -538,13 +572,71 @@ h1,h2,h3,h4,h5,h6.nolink {
 }
 
 
-/* CSS reset */
-h1,h2,h3,h4,h5,h6 {
-  color: #9a8866;
-  margin: 0;
-  padding: 0;
-  font-weight: normal;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
 
+@media (max-width: 1024px) {
+
+  .second-block
+  {
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    background-color: #181818db;
+    border: 2px solid #080808;
+    overflow: auto;
+    white-space: break-spaces;
+    text-overflow: ellipsis;
+    width: 78vw;
+    height: 10vh;
+  }
+
+  .third-block
+  {
+    display: none;
+    flex-direction: column;
+    background-color: #181818db;
+    border: 1px solid #080808;
+    width: 78vw;
+    height: 70vh;
+  }
+
+  .third-block.title
+  {
+    background-color: #181818db;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 78vw;
+    height: 10vh;
+    align-items: center;
+  }
+
+  .third-block.gif-block.pic
+  {
+    width: 50vw;
+    height: 33vw;
+  }
+
+
+  .third-block.gif-block
+  {
+    background-color: #181818db;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 78vw;
+    top: 26vh;
+    height: 60vh;
+    align-items: center;
+  }
+
+
+  .second-third
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90vh;
+  }
+
+}
