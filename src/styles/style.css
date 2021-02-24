@@ -5,6 +5,12 @@
 }
 
 
+a{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 
 /* CSS reset */
 h1,h2,h3,h4,h5,h6 {
@@ -183,6 +189,22 @@ body {
 }
 
 
+.footer
+{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 1vw;
+  background-color: #181818db;
+  border: 2px solid #080808;
+  overflow: auto;
+  white-space: pre-wrap;
+  text-overflow: ellipsis;
+  bottom: 0;
+  width: 100vw;
+  height: 3vh;
+}
 
 .first-block
 {
@@ -197,12 +219,16 @@ body {
   text-overflow: ellipsis;
   width: 18vw;
   height: 30vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 .second-block
 {
   display: none;
   align-items: center;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   justify-content: flex-start;
   flex-direction: column;
   background-color: #181818db;
@@ -249,6 +275,8 @@ body {
   flex-direction: column;
   width: 62vw;
   top: 6vh;
+  overflow: hidden;
+  white-space: nowrap;
   height: 84vh;
   align-items: center;
 }
@@ -533,11 +561,11 @@ theme.button,button,input.button {
 }
 
 @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */ {
-  0%   {background-color: #042230;}
-  25%   {background-color: #0a1d31;}
-  50%  {background-color: #030e23;}
-  75%	{background-color: #0a1d31;}
-  100% {background-color: #042230;}
+  0%   {background-color: #413d34;}
+  25%   {background-color: #000000;}
+  50%  {background-color: #26201a;}
+  75%	{background-color: #413d34;}
+  100% {background-color: #111010;}
 }
 
 #container > * {
@@ -573,7 +601,26 @@ h1,h2,h3,h4,h5,h6.nolink {
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 540px) {
+
+
+
+  .first-block
+  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #181818db;
+    border: 2px solid #080808;
+    overflow: hidden;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    width: 18vw;
+    height: 30vh;
+  }
+
+
 
   .second-block
   {
@@ -639,5 +686,26 @@ h1,h2,h3,h4,h5,h6.nolink {
     justify-content: space-evenly;
     height: 80vh;
   }
+
+
+
+  .footer
+  {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1vw;
+    background-color: #181818db;
+    border: 2px solid #080808;
+    overflow: auto;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    bottom: 0;
+    width: 100vw;
+    height: 5vh;
+  }
+
+
 
 }
