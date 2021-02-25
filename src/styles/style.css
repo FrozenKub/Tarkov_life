@@ -184,8 +184,10 @@ body {
 
 .second-third
 {
-  display: flex;
+  display: none;
   flex-direction: row;
+  justify-content: space-evenly;
+  width: 80vw;
 }
 
 
@@ -208,10 +210,7 @@ body {
 
 .first-block
 {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+  display: grid;
   background-color: #181818db;
   border: 2px solid #080808;
   overflow: auto;
@@ -229,12 +228,11 @@ body {
   align-items: center;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   flex-direction: column;
   background-color: #181818db;
   border: 2px solid #080808;
   overflow: auto;
-  white-space: break-spaces;
   text-overflow: ellipsis;
   width: 15vw;
   height: 90vh;
@@ -243,6 +241,7 @@ body {
 .third-block
 {
   display: none;
+  align-self: center;
   flex-direction: column;
   background-color: #181818db;
   border: 1px solid #080808;
@@ -286,8 +285,10 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  padding-left: 1vh;
 }
 
 
@@ -604,20 +605,32 @@ h1,h2,h3,h4,h5,h6.nolink {
 @media (max-width: 540px) {
 
 
+  button{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    color: #9a8866;
+    background-color: #00000000;
+    font-size: 1.4em;
+    border-radius: 10px;
+    border-color: rgba(255,255,255,0);
+    border-bottom-color: #181818eb;
+    border-width: 1px;
+    overflow: inherit;
+    min-height: 7vh;
+    max-height: 9vh;
+    min-width: 15vw;
+  }
+
+
 
   .first-block
   {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
+    display: grid;
     background-color: #181818db;
-    border: 2px solid #080808;
-    overflow: hidden;
-    white-space: pre-wrap;
-    text-overflow: ellipsis;
+    border: 1px solid #080808;
     width: 18vw;
-    height: 30vh;
+    height: 50vh;
   }
 
 
@@ -625,16 +638,15 @@ h1,h2,h3,h4,h5,h6.nolink {
   .second-block
   {
     display: none;
-    align-items: center;
     justify-content: flex-start;
-    flex-direction: row;
+    grid-auto-flow: column;
+    grid-auto-rows: auto;
+    grid-column-gap: 0.5vw;
     background-color: #181818db;
-    border: 2px solid #080808;
-    overflow: auto;
-    white-space: break-spaces;
-    text-overflow: ellipsis;
+    border: 1px solid #080808;
     width: 78vw;
-    height: 10vh;
+    max-width: 78vw;
+    height: 7vh;
   }
 
   .third-block
@@ -642,7 +654,7 @@ h1,h2,h3,h4,h5,h6.nolink {
     display: none;
     flex-direction: column;
     background-color: #181818db;
-    border: 1px solid #080808;
+    border: 0.5px solid #080808;
     width: 78vw;
     height: 60vh;
   }
@@ -680,8 +692,8 @@ h1,h2,h3,h4,h5,h6.nolink {
 
   .second-third
   {
-    align-self: flex-start;
-    display: flex;
+    display: none;
+    align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
     height: 80vh;

@@ -47,7 +47,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production",
+    "build": "webpack-dev-server --mode production --open --hot",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
