@@ -195,11 +195,12 @@ body {
 {
   position: absolute;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   padding-left: 1vw;
   background-color: #181818db;
-  border: 2px solid #080808;
+  border: 1px solid #080808;
   overflow: auto;
   white-space: pre-wrap;
   text-overflow: ellipsis;
@@ -212,7 +213,7 @@ body {
 {
   display: grid;
   background-color: #181818db;
-  border: 2px solid #080808;
+  border: 1px solid #080808;
   overflow: auto;
   white-space: pre-wrap;
   text-overflow: ellipsis;
@@ -231,7 +232,7 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
   background-color: #181818db;
-  border: 2px solid #080808;
+  border: 1px solid #080808;
   overflow: auto;
   text-overflow: ellipsis;
   width: 15vw;
@@ -705,8 +706,8 @@ h1,h2,h3,h4,h5,h6.nolink {
   {
     position: absolute;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     padding-left: 1vw;
     background-color: #181818db;
     border: 2px solid #080808;

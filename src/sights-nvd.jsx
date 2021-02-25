@@ -78,7 +78,6 @@ class SightsNVD extends React.Component{
 <div>
 <div className="footer">
     <a>Associated with Tarkov.Life</a>
-    <a>   </a>
     <a>Developed by FrozenKub</a>
 </div>
 
