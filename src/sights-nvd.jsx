@@ -13,7 +13,7 @@ class SightsNVD extends React.Component{
     {
         e.preventDefault();
             document.getElementById("second-block").style.display = "grid";
-            document.getElementById("second-third-block").style.display = "flex";
+            document.getElementById("second-third-block").style.display = "grid";
     }
 
     handleThirdClick(e)
