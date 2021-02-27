@@ -76,10 +76,6 @@ class SightsNVD extends React.Component{
         return (
 
 <div>
-<div className="footer">
-    <a>Associated with Tarkov.Life</a>
-    <a>Developed by FrozenKub</a>
-</div>
 
 
 <div className="flex-wrapper">
@@ -148,6 +144,11 @@ class SightsNVD extends React.Component{
                 </div>
 
                 <div className="full-screen">
+                    <div className="footer">
+                        <a>Associated with Tarkov.Life</a>
+                        <a>Developed by FrozenKub</a>
+                    </div>
+
                     <img src="/back.png" alt="Left Pic"/>
                 </div>
 </div>
