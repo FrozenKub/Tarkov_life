@@ -629,13 +629,12 @@ h1,h2,h3,h4,h5,h6.nolink {
   .second-third
   {
     display: none;
+    align-items: center;
+    justify-content: center;
     align-self: flex-start;
     grid-auto-flow: row;
     grid-auto-rows: auto;
-    grid-column-gap: 0.5vw;
-    align-items: center;
     flex-direction: column;
-    justify-content: space-around;
     height: 80vh;
   }
 
@@ -646,6 +645,7 @@ h1,h2,h3,h4,h5,h6.nolink {
     flex-direction: column;
     justify-content: center;
     background-color: #181818db;
+    border: 1px solid #080808;
     overflow: auto;
     white-space: pre-wrap;
     text-overflow: ellipsis;
