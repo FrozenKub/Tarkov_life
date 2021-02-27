@@ -70,6 +70,17 @@ class SightsNVD extends React.Component{
 
 
 
+    handleOpen(e, menu)
+    {
+        if (document.getElementById(menu).style.display == "grid")
+        {
+            document.getElementById(menu).style.display = "none";
+        }
+        else document.getElementById(menu).style.display = "grid";
+    }
+
+
+
     render()
     {
 
@@ -86,46 +97,49 @@ class SightsNVD extends React.Component{
                 <div className="page-blocks">
 
                     <div className="first-block" id="first-block">
-
-                        <a>NIGHT VISION DEVICES</a>
-                        <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "AN"})} }>PSV-14<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/2/25/PVS-14_Icon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "PNV10"})}}>PNV-10T<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/e/e8/PNV10TIcon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "N15"})}}>N-15<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/f/f3/Armasightn15icon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "GPNV"})}}>GPNVG-18<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a0/Gpnvgicon.png" className="small-pic"/></button>
-                        <br/><br/>
-                        <a>THERMAL VISION DEVICES</a>
+                        <button className="lighter-button" onClick={e=>{this.handleOpen(e, "NVD");}}>NIGHT VISION DEVICES</button>
+                        <div id="NVD" className="menu-pop-up">
+                            <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "AN"})} }>PSV-14<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/2/25/PVS-14_Icon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "PNV10"})}}>PNV-10T<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/e/e8/PNV10TIcon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "N15"})}}>N-15<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/f/f3/Armasightn15icon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "GPNV"})}}>GPNVG-18<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a0/Gpnvgicon.png" className="small-pic"/></button>
+                        </div>
+                        <button className="lighter-button" onClick={e=>{this.handleOpen(e, "TVD");}}>THERMAL VISION DEVICES</button>
+                        <div id="TVD" className="menu-pop-up">
                         <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "T7"})}}>T-7<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/d/d5/T-7_Icon.PNG" className="small-pic"/></button>
+                    </div>
                     </div>
 
                     <div className="second-third" id="second-third-block">
                     <div className="second-block" id="second-block">
-                        <a>COMPACT REFLEX SIGHTS</a>
-                        <br/>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "PK6"})}}>PK-06<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/6/62/Pk-06icon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "T1"})}}>T-1<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/2/20/T-1icon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "FF3"})}}>FF3<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/0/0c/Ff3icon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "DP"})}}>DP<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/7/75/Dpicon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "RMR"})}}>RMR<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/b/bd/Rmricon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "R4"})}}>Romeo 4<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/c/ca/Sig_Sauer_Romeo_4_reflex_sight_icon.png" className="small-pic"/></button>
-                        <br/><br/>
-                        <a>ASSAULT SCOPES</a>
-                        <br/>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "DR1"})}}>DR1/4x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/aa/SpectreDR_Icon.gif" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "HAMR"})}}>HAMR<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/3/33/Hamricon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "PRISM"})}}>Prism 2.5x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a0/Primary_Arms_Compact_prism_scope_2.5x_icon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "BRAVO4"})}}>BRAVO4<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/e/e9/Bravo4icon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "TA11D"})}}>TA11D<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/b/b4/Acogicon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "TA01NSN"})}}>TA01NSN<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/6/67/Trijicon_ACOG_TA01NSN_4x32_scope_icon.gif" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "PS320"})}}>PS320 1x/6x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/c/c2/Valday_PS-320_icon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "MONSTR"})}}>Monstr. 2x32<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/2/21/Monstrum2x32_Icon.png" className="small-pic"/></button>
-                        <br/><br/>
-                        <a>SPECIAL SCOPES</a>
-                        <br/>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "VULCAN"})}}>Vulcan MG 3.5x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a4/Vulcan_MG_night_scope_3.5x_Icon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "REAP"})}}>REAP-IR<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/1/1d/Thermalicon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "NSPU"})}}>NSPU-M<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/1/19/Nspu-micon.png" className="small-pic"/></button>
-                        <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "RS32"})}}>RS-32<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/9/94/FLIR_RS-32_Icon.png" className="small-pic"/></button>
+                        <button className="lighter-button" onClick={e=>{this.handleOpen(e, "CRS");}}> COMPACT REFLEX SIGHTS</button>
+                        <div id="CRS" className="menu-pop">
+                            <button id="CRS" onClick={e=>{this.handleThirdClick(e); this.setState({second: "PK6"})}}>PK-06<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/6/62/Pk-06icon.png" className="small-pic"/></button>
+                            <button id="CRS" onClick={e=>{this.handleThirdClick(e); this.setState({second: "T1"})}}>T-1<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/2/20/T-1icon.png" className="small-pic"/></button>
+                            <button id="CRS" onClick={e=>{this.handleThirdClick(e); this.setState({second: "FF3"})}}>FF3<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/0/0c/Ff3icon.png" className="small-pic"/></button>
+                            <button id="CRS" onClick={e=>{this.handleThirdClick(e); this.setState({second: "DP"})}}>DP<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/7/75/Dpicon.png" className="small-pic"/></button>
+                            <button id="CRS" onClick={e=>{this.handleThirdClick(e); this.setState({second: "RMR"})}}>RMR<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/b/bd/Rmricon.png" className="small-pic"/></button>
+                            <button id="CRS" onClick={e=>{this.handleThirdClick(e); this.setState({second: "R4"})}}>Romeo 4<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/c/ca/Sig_Sauer_Romeo_4_reflex_sight_icon.png" className="small-pic"/></button>
+                        </div>
+                        <button className="lighter-button" onClick={e=>{this.handleOpen(e, "AS");}}> ASSAULT SCOPES</button>
+                        <div id="AS" className="menu-pop">
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "DR1"})}}>DR1/4x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/aa/SpectreDR_Icon.gif" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "HAMR"})}}>HAMR<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/3/33/Hamricon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "PRISM"})}}>Prism 2.5x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a0/Primary_Arms_Compact_prism_scope_2.5x_icon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "BRAVO4"})}}>BRAVO4<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/e/e9/Bravo4icon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "TA11D"})}}>TA11D<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/b/b4/Acogicon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "TA01NSN"})}}>TA01NSN<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/6/67/Trijicon_ACOG_TA01NSN_4x32_scope_icon.gif" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "PS320"})}}>PS320 1x/6x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/c/c2/Valday_PS-320_icon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "MONSTR"})}}>Monstr. 2x32<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/2/21/Monstrum2x32_Icon.png" className="small-pic"/></button>
+                        </div>
 
+                        <button className="lighter-button" onClick={e=>{this.handleOpen(e, "SC");}}>SPECIAL SCOPES</button>
+                        <div id="SC" className="menu-pop">
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "VULCAN"})}}>Vulcan MG 3.5x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a4/Vulcan_MG_night_scope_3.5x_Icon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "REAP"})}}>REAP-IR<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/1/1d/Thermalicon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "NSPU"})}}>NSPU-M<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/1/19/Nspu-micon.png" className="small-pic"/></button>
+                            <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "RS32"})}}>RS-32<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/9/94/FLIR_RS-32_Icon.png" className="small-pic"/></button>
+                        </div>
                     </div>
 
                     <div className="third-block" id="third-block">

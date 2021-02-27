@@ -5,6 +5,19 @@
 }
 
 
+.menu-pop-up
+{
+  display: none;
+  grid-auto-flow: row;
+  grid-auto-rows: auto;
+  grid-column-gap: 0.5vw;
+}
+
+.menu-pop
+{
+  display: none;
+}
+
 div {
   cursor: url("https://i.imgur.com/f55S1wO.png"), auto;
 }
@@ -163,10 +176,33 @@ body {
   grid-auto-rows: auto;
   grid-column-gap: 0.5vw;
   flex-direction: row;
+  align-items: center;
   justify-content: space-evenly;
   width: 80vw;
 }
 
+.lighter-button
+{
+
+  cursor: url("https://i.imgur.com/HLnQ3vb.png"), auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #777667;
+  background-color: #00000000;
+  font-size: 1.4em;
+  border-radius: 10px;
+  border-color: rgba(255,255,255,0);
+  border-bottom-color: #181818eb;
+  border-width: 1px;
+  height: 5vh;
+}
+
+
+.lighter-button:hover{
+  color: black;
+  background: #777667;
+}
 
 .footer
 {
@@ -211,7 +247,7 @@ body {
   overflow: auto;
   text-overflow: ellipsis;
   width: 15vw;
-  height: 90vh;
+  height: 40vh;
 }
 
 .third-block
@@ -570,6 +606,20 @@ h1,h2,h3,h4,h5,h6.nolink {
     height: 50vh;
   }
 
+  .menu-pop
+  {
+    grid-auto-flow: column;
+    grid-auto-rows: auto;
+    grid-column-gap: 0.5vw;
+  }
+
+
+  .menu-pop-up
+  {
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
+    grid-column-gap: 0.5vw;
+  }
 
 
   .second-block
