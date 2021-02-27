@@ -212,6 +212,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #181818db;
+  border: 1px solid #080808;
   overflow: auto;
   white-space: pre-wrap;
   text-overflow: ellipsis;
@@ -223,6 +224,8 @@ body {
 .first-block
 {
   display: grid;
+  align-items: center;
+  justify-content: center;
   background-color: #181818db;
   border: 1px solid #080808;
   overflow: auto;

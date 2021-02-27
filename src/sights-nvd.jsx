@@ -74,9 +74,16 @@ class SightsNVD extends React.Component{
     {
         if (document.getElementById(menu).style.display == "grid")
         {
+            document.getElementById(menu+ "_BUT").style.color = "#777667";
+            document.getElementById(menu+ "_BUT").style.backgroundColor = "#00000000";
             document.getElementById(menu).style.display = "none";
         }
-        else document.getElementById(menu).style.display = "grid";
+        else
+        {
+            document.getElementById(menu+ "_BUT").style.color = "black";
+            document.getElementById(menu+ "_BUT").style.backgroundColor = "#777667";
+            document.getElementById(menu).style.display = "grid";
+        }
     }
 
 
@@ -97,14 +104,14 @@ class SightsNVD extends React.Component{
                 <div className="page-blocks">
 
                     <div className="first-block" id="first-block">
-                        <button className="lighter-button" onClick={e=>{this.handleOpen(e, "NVD");}}>NIGHT VISION DEVICES</button>
+                        <button className="lighter-button" id="NVD_BUT" onClick={e=>{this.handleOpen(e, "NVD");}}>NIGHT VISION DEVICES</button>
                         <div id="NVD" className="menu-pop-up">
                             <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "AN"})} }>PSV-14<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/2/25/PVS-14_Icon.png" className="small-pic"/></button>
                             <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "PNV10"})}}>PNV-10T<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/e/e8/PNV10TIcon.png" className="small-pic"/></button>
                             <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "N15"})}}>N-15<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/f/f3/Armasightn15icon.png" className="small-pic"/></button>
                             <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "GPNV"})}}>GPNVG-18<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a0/Gpnvgicon.png" className="small-pic"/></button>
                         </div>
-                        <button className="lighter-button" onClick={e=>{this.handleOpen(e, "TVD");}}>THERMAL VISION DEVICES</button>
+                        <button className="lighter-button" id="TVD_BUT" onClick={e=>{this.handleOpen(e, "TVD");}}>THERMAL VISION DEVICES</button>
                         <div id="TVD" className="menu-pop-up">
                         <button onClick={e=>{this.handleSecondClick(e); this.setState({first: "T7"})}}>T-7<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/d/d5/T-7_Icon.PNG" className="small-pic"/></button>
                     </div>
@@ -112,7 +119,7 @@ class SightsNVD extends React.Component{
 
                     <div className="second-third" id="second-third-block">
                     <div className="second-block" id="second-block">
-                        <button className="lighter-button" onClick={e=>{this.handleOpen(e, "CRS");}}> COMPACT REFLEX SIGHTS</button>
+                            <button className="lighter-button" id="CRS_BUT" onClick={e=>{this.handleOpen(e, "CRS");}}> COMPACT REFLEX SIGHTS</button>
                         <div id="CRS" className="menu-pop">
                             <button id="CRS" onClick={e=>{this.handleThirdClick(e); this.setState({second: "PK6"})}}>PK-06<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/6/62/Pk-06icon.png" className="small-pic"/></button>
                             <button id="CRS" onClick={e=>{this.handleThirdClick(e); this.setState({second: "T1"})}}>T-1<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/2/20/T-1icon.png" className="small-pic"/></button>
@@ -121,7 +128,7 @@ class SightsNVD extends React.Component{
                             <button id="CRS" onClick={e=>{this.handleThirdClick(e); this.setState({second: "RMR"})}}>RMR<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/b/bd/Rmricon.png" className="small-pic"/></button>
                             <button id="CRS" onClick={e=>{this.handleThirdClick(e); this.setState({second: "R4"})}}>Romeo 4<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/c/ca/Sig_Sauer_Romeo_4_reflex_sight_icon.png" className="small-pic"/></button>
                         </div>
-                        <button className="lighter-button" onClick={e=>{this.handleOpen(e, "AS");}}> ASSAULT SCOPES</button>
+                            <button className="lighter-button" id="AS_BUT" onClick={e=>{this.handleOpen(e, "AS");}}> ASSAULT SCOPES</button>
                         <div id="AS" className="menu-pop">
                             <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "DR1"})}}>DR1/4x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/aa/SpectreDR_Icon.gif" className="small-pic"/></button>
                             <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "HAMR"})}}>HAMR<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/3/33/Hamricon.png" className="small-pic"/></button>
@@ -132,8 +139,7 @@ class SightsNVD extends React.Component{
                             <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "PS320"})}}>PS320 1x/6x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/c/c2/Valday_PS-320_icon.png" className="small-pic"/></button>
                             <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "MONSTR"})}}>Monstr. 2x32<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/2/21/Monstrum2x32_Icon.png" className="small-pic"/></button>
                         </div>
-
-                        <button className="lighter-button" onClick={e=>{this.handleOpen(e, "SC");}}>SPECIAL SCOPES</button>
+                            <button className="lighter-button" id="SC_BUT" onClick={e=>{this.handleOpen(e, "SC");}}>SPECIAL SCOPES</button>
                         <div id="SC" className="menu-pop">
                             <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "VULCAN"})}}>Vulcan MG 3.5x<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/a/a4/Vulcan_MG_night_scope_3.5x_Icon.png" className="small-pic"/></button>
                             <button onClick={e=>{this.handleThirdClick(e); this.setState({second: "REAP"})}}>REAP-IR<img src="https://static.wikia.nocookie.net/escapefromtarkov_gamepedia/images/1/1d/Thermalicon.png" className="small-pic"/></button>
